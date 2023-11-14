@@ -42,7 +42,7 @@ const Result = ({result, quiz}) => {
         <h2 className="text-green-500">Wrong Answer: </h2>
         <p>{wrongAnswer}</p>
       </div>
-      <div>
+      <div className="mt-4">
         <Button
           className="bg-blue-600 capitalize m-4"
           variant="contained"

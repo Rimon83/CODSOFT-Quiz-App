@@ -80,7 +80,7 @@ const QuestionStyle = ({quiz, setShowResult, setResult}) => {
             })}
         </Typography>
         
-      <div className="flex justify-between">
+      <div className="flex justify-between mt-4">
         <span className="text-2xl">
           {index + 1}/{quiz.length}
         </span>
