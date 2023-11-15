@@ -23,3 +23,5 @@ export const difficulty = [
     name: "hard",
   },
 ];
+
+export const date = new Date().getFullYear();
