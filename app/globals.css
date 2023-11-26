@@ -2,12 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+body, html{
+  max-width: 100vw;
+  overflow-x: hidden
+
+}
+body{
+    background-image: linear-gradient(to right,rgb(173, 238, 160), rgb(197, 197, 242))
+
+}
+
 .flex-center {
   @apply flex justify-center items-center;
 }
 
 .flex-around {
   @apply flex justify-around items-center;
+}
+.flex-between {
+  @apply flex justify-between items-center;
 }
 
 .ulStyle{

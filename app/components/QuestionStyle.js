@@ -2,7 +2,8 @@ import {useState} from "react";
 import { Box, Typography, CircularProgress, Button } from "@mui/material";
 const QuestionStyle = ({quiz, setShowResult, setResult}) => {
   const [index, setIndex] = useState(0);
-  const [answerSelected, setAnswerSelected] = useState(false);
+  const [backIndex, setBackIndex] = useState();
+  const [backIndexCheck, setBackIndexCheck] = useState(false)
   const [answerIndexSelected, setAnswerIndexSelected] = useState();
   const [checkAnswerSelected, setCheckAnswerSelected] = useState(null)
 
@@ -20,13 +21,14 @@ const QuestionStyle = ({quiz, setShowResult, setResult}) => {
 
   const handleNextClick = () => {
     setIndex(index + 1);
-    setAnswerSelected("");
+    setBackIndexCheck(false)
      setAnswerIndexSelected("");    
 
     
   };
   const handleBackClick = () => {
     setIndex(index - 1);
+    setBackIndexCheck(true)
     setResult((prev) => ({
       ...prev,
       // Update the score, correctAnswer, and wrongAnswer based on the current selected answer
@@ -48,7 +50,7 @@ const QuestionStyle = ({quiz, setShowResult, setResult}) => {
 
   const handleSelectClick = (answer, idx) => {
     setAnswerIndexSelected(idx);
-    // setAnswerSelected(true);
+    setBackIndex(idx)
 
     if (answer === quiz[index].correct_answer) {
       setCheckAnswerSelected(true)
@@ -88,13 +90,13 @@ const QuestionStyle = ({quiz, setShowResult, setResult}) => {
       </div>
       <div className="flex justify-center">
         <ul className="ulStyle">
-          {answerIndex.length &&
+          {answerIndex &&
             answerIndex.sort().map((answer, idx) => {
               return (
                 <li
                   onClick={() => handleSelectClick(answer, idx)}
                   className={`liStyle cursor-pointer ${
-                    answerIndexSelected === idx
+                    (answerIndexSelected === idx ||(backIndexCheck && backIndex === idx))
                       ? "bg-blue-400"
                       : "hover:bg-gray-300"
                   }`}

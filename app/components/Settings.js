@@ -28,7 +28,7 @@ const Settings = () => {
 
  if (loading){
   return (
-    <Box className="flex justify-center items-center mt-[2rem]">
+    <Box className="flex justify-center items-center mt-[400px]">
       <CircularProgress/>
     </Box>
   );
@@ -40,7 +40,7 @@ const Settings = () => {
  }
 
   return (
-    <section className=" flex flex-col justify-center items-center gap-6 md:w-1/2 md:mx-auto border rounded-lg border-gray-300  mx-5 mt-10 p-4">
+    <section className=" flex flex-col justify-center items-center gap-6 md:w-1/2 md:mx-auto border rounded-lg border-gray-300  mx-5 mt-40 p-4">
       <Typography variant="h2" fontWeight="bold">
         Quizfast
       </Typography>

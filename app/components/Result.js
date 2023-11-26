@@ -5,10 +5,10 @@ import { useRouter } from 'next/navigation'
 const Result = ({result, quiz}) => {
  const router = useRouter()
  const {score, correctAnswer, wrongAnswer} = result
- const percentage =Math.trunc((correctAnswer / quiz.length) * 100);
+ const percentage =Math.trunc((correctAnswer / quiz.length) * 100) || 0;
 
   return (
-    <Box className="flex flex-col gap-3 mt-10 border border-gray-400 sm:w-1/2 w-full mx-auto p-8 rounded-lg shadow-md m-6">
+    <Box className=" flex flex-col gap-3 border border-gray-400 sm:w-1/2 w-full mx-auto p-8 rounded-lg shadow-md mt-[200px]">
       {percentage >= 50 ? (
         <div className="flex justify-center">
           <iframe
@@ -31,15 +31,15 @@ const Result = ({result, quiz}) => {
         <h1 className="text-2xl font-bold">{percentage}%</h1>
       </div>
       <div className="flex gap-2 className='text-2xl'">
-        <h2 className="text-green-500">Score: </h2>
+        <h2 className="text-blue-500">Score: </h2>
         <p>{score}</p>
       </div>
       <div className="flex gap-2 className='text-2xl'">
-        <h2 className="text-green-500">Correct Answer: </h2>
+        <h2 className="text-blue-500">Correct Answer: </h2>
         <p>{correctAnswer}</p>
       </div>
       <div className="flex gap-2 className='text-2xl'">
-        <h2 className="text-green-500">Wrong Answer: </h2>
+        <h2 className="text-blue-500">Wrong Answer: </h2>
         <p>{wrongAnswer}</p>
       </div>
       <div className="mt-4">

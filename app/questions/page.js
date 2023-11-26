@@ -32,25 +32,29 @@ const Questions = () => {
   useEffect(() => {
     async function treatGetData() {
       const data = await getCategories(url);
+
+      if(data){
       const questions = data.results;
       setQuiz(questions);
+      }
       setLoading(false);
     }
     treatGetData();
   }, [url]);
 
+
   
   return (
-    <>
+    <div className="mt-[100px]">
       {loading ? (
-        <Box className="flex justify-center items-center mt-[2rem]">
+        <Box className="flex justify-center items-center mt-[400px]">
           <CircularProgress />
         </Box>
-      ) : !quiz.length ? (
+      ) : !quiz ? (
         <div className="m-4">
-          <h1>There is no match questions. Try with new settings</h1>
+          <h1 className="mb-8">There is no match questions. Try with new settings</h1>
           <Button
-            className="bg-blue-600 capitalize m-4"
+            className="bg-blue-600 capitalize"
             variant="contained"
             onClick={() => router.push("/")}
           >
@@ -74,7 +78,7 @@ const Questions = () => {
       ) : (
         <Result result={result} quiz={quiz} />
       )}
-    </>
+    </div>
   );
 };
 
