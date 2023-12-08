@@ -15,8 +15,6 @@ const Result = ({result, quiz}) => {
             src="https://giphy.com/embed/5Maa0cjKsADyiInagF"
             width="200"
             height="200"
-            frameBorder="0"
-            class="giphy-embed"
             allowFullScreen
             className="rounded-lg"
           ></iframe>
