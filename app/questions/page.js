@@ -14,7 +14,7 @@ const Questions = () => {
   const [quiz, setQuiz] = useState([]);
   const [loading, setLoading] = useState(true);
   const [showResult, setShowResult] = useState(false)
-  const [result, setResult] = useState({score:0, correctAnswer:0, wrongAnswer:0});
+  const [result, setResult] = useState({score:0, correctAnswer:0, wrongAnswer:0, selectedAnswers: [], counted: 0});
   const router = useRouter();
 
   
@@ -47,7 +47,7 @@ const Questions = () => {
   return (
     <div className="my-[100px]">
       {loading ? (
-        <Box className="flex justify-center items-center mt-[400px]">
+        <Box className="flex justify-center items-center mt-[400px] h-screen">
           <CircularProgress />
         </Box>
       ) : !quiz ? (

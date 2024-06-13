@@ -26,6 +26,11 @@ const QuestionStyle = ({quiz, setShowResult, setResult}) => {
     setBackIndexCheck(false)
      setAnswerIndexSelected("");
      setWidth((prev) => prev + (100 / quiz.length))
+     setResult((prev) => ({
+      ...prev,
+      selectedAnswers: [],
+      counted: 0
+     }))
     
   };
   const handleBackClick = () => {
@@ -64,19 +69,21 @@ const QuestionStyle = ({quiz, setShowResult, setResult}) => {
 
     }
     setResult((prev) =>
-      checkAnswerSelected
+      checkAnswerSelected && !prev.selectedAnswers.includes(idx)
         ? {
             ...prev,
             score: prev.score + 5,
             correctAnswer: prev.correctAnswer + 1,
           }
-        : {
+        : !checkAnswerSelected && !prev.selectedAnswers.includes(idx) && prev.counted === 0 ?{
             ...prev,
             wrongAnswer: prev.wrongAnswer + 1,
+            counted: 1
+          } : {
+            ...prev
           }
     );
   };
-  console.log(width)
 
   return (
     <div className="px-4">
