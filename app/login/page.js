@@ -25,19 +25,21 @@ const Login = () => {
    }
  };
   return (
-    <div className="mt-40 flex flex-col gap-6 justify-center items-center sm:w-1/2 mx-auto w-full border-2 border-gray-400 p-20 rounded-lg">
-      <button
-        onClick={handleGithubSignIn}
-        className="w-1/2 bg-black text-white hover:bg-indigo-500 p-3 rounded-lg"
-      >
-        Sign in with Github
-      </button>
-      <button
-        onClick={handleGoogleSignIn}
-        className="w-1/2 bg-black text-white hover:bg-indigo-500 p-3 rounded-lg"
-      >
-        Sign in with Google
-      </button>
+    <div className="h-screen flex justify-center items-center px-4">
+      <div className="flex flex-col gap-6 justify-center items-center max-w-screen-md w-full mx-auto shadow-lg p-20 bg-[#d9fffc] rounded-lg">
+        <button
+          onClick={handleGithubSignIn}
+          className="w-full bg-black text-white hover:bg-[#4ba09a] p-3 rounded-lg"
+        >
+          Sign in with Github
+        </button>
+        <button
+          onClick={handleGoogleSignIn}
+          className="w-full bg-black text-white hover:bg-[#4ba09a] p-3 rounded-lg"
+        >
+          Sign in with Google
+        </button>
+      </div>
     </div>
   );
 }

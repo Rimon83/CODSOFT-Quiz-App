@@ -40,11 +40,11 @@ const Settings = () => {
  }
 
   return (
-    <section className=" flex flex-col justify-center items-center gap-6 md:w-1/2 md:mx-auto border rounded-lg border-gray-300  mx-5 mt-40 p-4">
-      <Typography variant="h2" fontWeight="bold">
+    <section className=" flex flex-col justify-center items-center gap-6 md:w-1/2 md:mx-auto shadow-lg rounded-lg mx-5 mt-40 p-4 my-[2rem]">
+      <Typography variant="h2" fontWeight="bold" className="text-[#4ba09a]">
         Quizfast
       </Typography>
-      <h2 className="text-2xl">Settings</h2>
+      <h2 className="text-2xl text-[#4ba09a]">Settings</h2>
       <form className="w-full flex flex-col gap-3" onSubmit={handleSubmit}>
         <Input label="category" options={categories} setValid={setValid} />
         <Input label="type" options={type} setValid={setValid} />

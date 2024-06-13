@@ -13,12 +13,21 @@ export default function Home() {
           <Settings />
         </div>
       ) : (
-        <div className="mt-40 flex flex-col justify-center items-center gap-[100px] sm:w-1/2 w-full mx-auto text-center">
-          <h1 className="text-3xl leading-[40px] font-medium">
-            Welcome to the Ultimate Quiz Experience! Test your knowledge, and
-            challenge your friends. Let the quiz begins!
-          </h1>
-          <Link className="px-8 py-2 bg-black hover:bg-indigo-500 rounded-lg text-white" href="/login">Get started</Link>
+        <div className=" flex flex-col justify-center gap-[100px] md:max-w-screen-md w-full mx-auto h-screen text-center">
+          <div className="md:w-[80%] w-full mx-auto px-[1rem]">
+            <h1 className="lg:text-3xl text-xl leading-[40px] font-medium text-[#4ba09a]">
+              Welcome to the Ultimate Quiz Experience! Test your knowledge, and
+              challenge your friends. Let the quiz begins!
+            </h1>
+          </div>
+          <div>
+            <Link
+              className="px-8 py-2 bg-black hover:bg-[#4ba09a] rounded-lg text-white"
+              href="/login"
+            >
+              Get started
+            </Link>
+          </div>
         </div>
       )}
     </>

@@ -45,7 +45,7 @@ const Questions = () => {
 
   
   return (
-    <div className="mt-[100px]">
+    <div className="my-[100px]">
       {loading ? (
         <Box className="flex justify-center items-center mt-[400px]">
           <CircularProgress />

@@ -13,7 +13,8 @@ body, html{
 
 }
 body{
-    background-image: linear-gradient(to right,rgb(173, 238, 160), rgb(197, 197, 242))
+    background-image: linear-gradient(to top,#70f1e8, rgb(246, 246, 253));
+    height: 100vh
 
 }
 
