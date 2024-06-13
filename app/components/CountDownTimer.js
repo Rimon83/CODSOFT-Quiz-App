@@ -55,8 +55,8 @@ const CountdownTimer = ({quiz, setShowResult, result, setResult}) => {
   }, [timeLeft]);
 
   return (
-    <div className="flex flex-col">
-      <div className="self-end m-8 text-2xl bg-gray-100 p-2 rounded-md">
+    <div className="flex flex-col -mb-[2rem]">
+      <div className="self-end mr-4 text-2xl bg-gray-100 p-2 rounded-md">
         <p>
           {timeLeft.minutes.toString().padStart(2, "0")}:
           {timeLeft.seconds.toString().padStart(2, "0")}

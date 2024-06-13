@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         <AuthContextProvider>
           <GlobalState>
             <Navbar />
-            <main className="h-full-screen">{children}</main>
+            <main className="">{children}</main>
             <Footer />
           </GlobalState>
         </AuthContextProvider>

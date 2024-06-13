@@ -87,9 +87,9 @@ const QuestionStyle = ({quiz, setShowResult, setResult}) => {
 
   return (
     <div className="px-4">
-      <Box className="flex flex-col my-10 lg:w-[60%] w-full mx-auto p-8 rounded-lg shadow-lg m-6 bg-[#d9fffc] border-t-[6px] relative">
+      <Box className="flex flex-col my-10 lg:w-[60%] w-full mx-auto p-8 rounded-lg shadow-lg bg-[#d9fffc] border-t-[6px] relative">
         <div className={`h-2 absolute bg-[#4ba09a] -top-2 left-0`} style={{width: `${width}%`}}></div>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center">
           <Typography
             variant="h5"
             className="text-center text-[#4ba09a] my-6 max-w-md mx-auto"

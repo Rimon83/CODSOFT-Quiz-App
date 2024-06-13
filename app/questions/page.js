@@ -47,7 +47,7 @@ const Questions = () => {
   return (
     <div className="my-[100px]">
       {loading ? (
-        <Box className="flex justify-center items-center mt-[400px] h-screen">
+        <Box className="flex justify-center items-center h-screen">
           <CircularProgress />
         </Box>
       ) : !quiz ? (
